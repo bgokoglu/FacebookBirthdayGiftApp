@@ -11,7 +11,7 @@
             <label>@friend.Name</label>
             @if (friend.Picture != null && friend.Picture.Data != null)
             {
-              <img class="img-polaroid" src="@friend.Picture.Data.Url" />
+              <img class="img-polaroid" src="@friend.Picture.Data.Url" alt="Profile Pictures" />
             }
           </div>
         </a>
@@ -22,14 +22,7 @@
       <td>
         @*<a target="_top" href="@GlobalFacebookConfiguration.Configuration.AppUrl@Url.Action("RecommendGifts", "Home", new { friendId = friend.Id })" role="button" class="btn btn-success">*@
         <a target="_top" href="javascript:alert('coming soon!!!')" role="button" class="btn btn-success">
-          @if (friend.Gender == "male")
-          {
-            <span>Buy him a present</span>
-          }
-          else
-          {
-            <span>Buy her a present</span>
-          }
+            <span>Buy @(friend.Gender == "male" ? "him" : "her") a present</span>
         </a>
       </td>
     </tr>
