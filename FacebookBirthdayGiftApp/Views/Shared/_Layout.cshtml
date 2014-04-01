@@ -41,10 +41,10 @@
           </a>
           <a class="brand" target="_top" href="@GlobalFacebookConfiguration.Configuration.AppUrl@Url.Action("Index", "Home")">Birthday App</a>
           <div class="nav-collapse collapse">
-            <ul class="nav">
+            @*<ul class="nav">
               <li><a target="_top" href="@GlobalFacebookConfiguration.Configuration.AppUrl@Url.Action("Index", "Home")">Home</a></li>
               <li><a href="@Url.Action("About", "Home")" >About</a></li>
-            </ul>
+            </ul>*@
             <form class="navbar-form pull-right" action="@Url.Action("Search", "Home")" method="get">
               <input class="span2" type="text" name="friendName" placeholder="Friend's name" />
               <button type="submit" class="btn">Search</button>
